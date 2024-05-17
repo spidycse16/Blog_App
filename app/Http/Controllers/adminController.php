@@ -31,7 +31,7 @@ class adminController extends Controller
         }
         $post->poststatus=$request->type;
         $post->user_id=$user_id;
-        $post->usertype=$user_type;
+        $post->usertype='admin';
         $post->save();
         return redirect()->back()->with('message','Post added successfully');
     }

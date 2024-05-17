@@ -1,5 +1,4 @@
-<x-app-layout>
-    <!DOCTYPE html>
+ <!DOCTYPE html>
     <html lang="en">
        <head>
           <!-- basic -->
@@ -8,17 +7,18 @@
        <body>
           <!-- header section start -->
           <div class="header_section">
-             @include('home.header')
+
+             @include('home.loggedin_header')
              <!-- banner section start -->
             @include('home.banner')
              <!-- banner section end -->
           </div>
           <!-- header section end -->
           <!-- services section start -->
-          @include('home.service')
-          <!-- services section end -->
+          {{-- @include('home.service') --}}
+          {{-- <!-- services section end --> --}}
           <!-- about section start -->
-          @include('home.about')
+          {{-- @include('home.about') --}}
           <!-- about section end -->
           <!-- blog section start -->
          
@@ -44,6 +44,7 @@
                       <li><a href="#"><img src="images/twitter-icon.png"></a></li>
                       <li><a href="#"><img src="images/linkedin-icon.png"></a></li>
                       <li><a href="#"><img src="images/instagram-icon.png"></a></li>
+                      
                    </ul>
                 </div>
              </div>
@@ -70,4 +71,4 @@
           <script src="https:cdnjs.cloudflare.com/ajax/libs/fancybox/2.1.5/jquery.fancybox.min.js"></script>    
        </body>
     </html>
-</x-app-layout>
+
