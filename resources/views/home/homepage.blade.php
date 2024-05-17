@@ -6,7 +6,6 @@
    </head>
    <body>
       <!-- header section start -->
-      <h1>without login</h1>
       <div class="header_section">
          @include('home.header')
          <!-- banner section start -->
