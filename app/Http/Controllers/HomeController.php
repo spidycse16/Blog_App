@@ -5,9 +5,33 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use App\Models\Post;
+use App\Models\User;
+use App\Models\Follower;
 
 class HomeController extends Controller
 {
+    public function follow_user($whom,$who)
+    {
+        $user1=User::find($whom);
+        $user2=User::find($who);
+        $follower = new Follower;
+
+        // Set follower and following information
+        $follower->follower_id = $user2->id;
+        $follower->follower_name = $user2->name; // Assuming 'name' is a property in User model
+        $follower->following_id = $user1->id;
+        $follower->following_name = $user1->name; // Assuming 'name' is a property in User model
+      
+        // Save the follower information
+        $follower->save();
+        session()->flash('message', 'You are now following ' . $user1->name . '!');
+        return redirect()->back();
+    }
+    public function alluser()
+    {
+        $user=User::all();
+        return view('home.alluser',compact('user'));
+    }
     public function allpost()
     {
         $post=Post::all();

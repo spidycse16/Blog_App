@@ -36,6 +36,7 @@
              <li><x-app-layout>
             </x-app-layout></li>
             <li><a href="/user_create_post">Create Post</a></li>
+            <li><a href="/alluser">Follow users</a></li>
           </ul>
        </div>
     </div>

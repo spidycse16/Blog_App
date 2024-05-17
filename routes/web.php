@@ -15,6 +15,8 @@ Route::get('/show_blog/{id}/',[HomeController::class,'show_blog']);
 Route::get('/user_create_post',[HomeController::class,'user_create_post']);
 Route::post('/add_user_post',[HomeController::class,'add_user_post']);
 Route::get('/allpost',[HomeController::class,'allpost']);
+Route::get('/alluser',[HomeController::class,'alluser']);
+Route::get('/follow_user/{whom}/{who}/',[HomeController::class,'follow_user']);
 
 Route::get('/post_page',[adminController::class,'postData'])->name('');
 Route::post('/add_post',[adminController::class,'addData'])->name('');
